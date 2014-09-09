@@ -3,16 +3,7 @@ package smile.example.spark
 import org.apache.spark.rdd.RDD
 import smile.util.LocalSparkContext
 
-/**
- * This is an example of what a driver program for Spark looks like. (A Scala object with a main method)
- *
- * A driver program creates RDDs to work with data. Execution of RDDs (whether its reading in data,
- * applying transformations, etc...) take place on the executor nodes (be it a Mesos slave, a YARN application node,
- * or a Spark slave node, depending on your chosen method of deployment.)
- *
- * In this example, we run Spark in "local" mode so the executor is instantiated within the same process as
- * the driver.
- */
+
 object sparkExample2 {
   def main(args: Array[String]): Unit = {
     // Create a SparkContext that runs a local executor
