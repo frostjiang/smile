@@ -3,11 +3,11 @@ import sbt._
 
 object build extends Build {
 
-	lazy val core = Project(id = "core", base = file("smile-core"), settings = Settings.core)
+  lazy val core = Project(id = "core", base = file("smile-core"), settings = Settings.core)
 
-	lazy val proj = Project(id = "projects", base = file("smile-projects"), settings = Settings.proj)
+  lazy val proj = Project(id = "projects", base = file("smile-projects"), settings = Settings.proj)
 
-	object Settings {
+  object Settings {
     private val breezeV = "0.8.1"
     private val configV = "1.2.1"
     private val gsonV = "2.2.4"
@@ -24,7 +24,7 @@ object build extends Build {
       Defaults.coreDefaultSettings ++
         net.virtualvoid.sbt.graph.Plugin.graphSettings ++
         Seq(
-        	name := "core",
+          name := "core",
           organization := "smile-ss",
           version := "0.0",
           scalaVersion := "2.10.4",
@@ -54,23 +54,24 @@ object build extends Build {
         )
     }
 
-    def proj = {core ++ Seq(
-      name := "proj",
-      libraryDependencies ++= Seq(
-        "org.scalanlp" %% "breeze" % "0.8.1",
-        "org.scalanlp" %% "breeze-natives" % "0.8.1",
-        "org.scalanlp" %% "epic-parser-en-span" % "2014.6.3-SNAPSHOT",
-        "com.chuusai" % "shapeless_2.10.4" % "2.0.0",
-            "com.google.code.gson" % "gson" % gsonV,
-            "de.bwaldvogel" % "liblinear" % liblinearV,
-            "org.apache.spark" %% "spark-mllib" % sparkV,
-            "org.apache.spark" %% "spark-sql" % sparkV,
-            "org.apache.spark" %% "spark-graphx" % sparkV,
-            "org.apache.spark" %% "spark-streaming" % sparkV,
-            "org.scalaz" %% "scalaz-core" % scalazV
+    def proj = {
+      core ++ Seq(
+        name := "proj",
+        libraryDependencies ++= Seq(
+          "org.scalanlp" %% "breeze" % "0.8.1",
+          "org.scalanlp" %% "breeze-natives" % "0.8.1",
+          "org.scalanlp" %% "epic-parser-en-span" % "2014.6.3-SNAPSHOT",
+          "com.chuusai" % "shapeless_2.10.4" % "2.0.0",
+          "com.google.code.gson" % "gson" % gsonV,
+          "de.bwaldvogel" % "liblinear" % liblinearV,
+          "org.apache.spark" %% "spark-mllib" % sparkV,
+          "org.apache.spark" %% "spark-sql" % sparkV,
+          "org.apache.spark" %% "spark-graphx" % sparkV,
+          "org.apache.spark" %% "spark-streaming" % sparkV,
+          "org.scalaz" %% "scalaz-core" % scalazV
+        )
       )
-    )
-}
+    }
 
   }
 

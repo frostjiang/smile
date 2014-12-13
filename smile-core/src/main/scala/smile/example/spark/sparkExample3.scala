@@ -10,9 +10,9 @@ object sparkExample3 {
 
     val lines = sc.textFile("README.md").cache()
 
-    val words = lines.flatMap(line => line.split(" "))
-      .map(word => (word, 1)).reduceBykey(_+_).collect()
-
-    words.foreach(println)
+//    val words = lines.flatMap(line => line.split(" "))
+//      .map(word => (word, 1)).reduceBykey(_+_).collect()
+//
+//    words.foreach(println)
   }
 }
