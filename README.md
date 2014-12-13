@@ -4,8 +4,8 @@ SMILE
 This repo is used for the Studies in Multimedia Information LEarning. 
 The ultimate goal is to create an Intelligence World.
 
-smile is a sbt project for the applications of text, audio, image, and video data with machine learning algorithms. 
-The system is written by Scala/Java/Python.
+smile is a house study for the applications of text, audio, image, and video data with machine learning algorithms. 
+The system is written by Scala/Spark/Java/Python.
 
 SMILE project is designed to develop several applications:
 * Audio Conversion
@@ -27,4 +27,6 @@ SMILE project is designed to develop several applications:
 * Text Sentiment Analysis
 * Multiple-model X
 * HCI
+
+Just beginning!
 
